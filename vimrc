@@ -126,6 +126,9 @@ nmap <F6> !nosetests -xs % <esc>
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
 
+" ack.vim settings
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 " easy indentation in visual mode
 " this keeps the visual selection active after indenting, which is usually lost
 " after you indent it
