@@ -94,6 +94,7 @@ set virtualedit=block
 set laststatus=2
 
 set statusline=%n\ %1*%h%f%*\ %=%<[%3lL,%2cC]\ %2p%%\ 0x%02B%r%m
+set statusline+=\ %{fugitive#statusline()}
 
 " show ruler
 set ruler
