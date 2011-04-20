@@ -115,7 +115,7 @@ set shiftwidth=4
 set expandtab
 
 " python tab settings
-autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=80 | set softtabstop=4 |set smartindent | set smarttab
+autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=80 | set softtabstop=4 | set smartindent | set smarttab
 
 " other python settings
 nmap <F5> oimport pdb; pdb.set_trace()<esc>
