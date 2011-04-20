@@ -161,19 +161,22 @@ map <F8> :!/usr/bin/ctags -R --python-kinds=-iv --exclude=build --exclude=dist -
 if has("gui_running")
 
     " colors
-    " colorscheme molokai
+    "colorscheme molokai
     "colorscheme zenburn
     "colorscheme wombat
     "colorscheme railscasts
-    colorscheme blackdust
+    "colorscheme blackdust
+    colorscheme rdark
 
     " change cwd to the current file that's being edited (each time)
     set autochdir
 
-    " no need for the menu bar or toolbar in the gui
+    " no need for the menu bar, scrollbar or toolbar in the gui
     set guioptions-=m
     set guioptions-=T
+    set guioptions-=r
+    set guioptions-=R
 
 "else
-"    colorscheme robokai
+"    colorscheme dessert
 endif
