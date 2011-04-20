@@ -1,0 +1,9 @@
+[submodule "bundle/git-vim"]
+	path = bundle/git-vim
+	url = https://github.com/motemen/git-vim
+[submodule "bundle/vimerl"]
+	path = bundle/vimerl
+	url = https://github.com/oscarh/vimerl
+[submodule "bundle/vim-clojure"]
+	path = bundle/vim-clojure
+	url = https://github.com/vim-scripts/VimClojure.git
