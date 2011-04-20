@@ -122,6 +122,10 @@ nmap <F5> oimport pdb; pdb.set_trace()<esc>
 set tags+=~/.vim/tags/python.ctags
 nmap <F6> !nosetests -xs % <esc>
 
+" vim clojure settings
+let g:clj_highlight_builtins=1
+let g:clj_paren_rainbow=1
+
 " easy indentation in visual mode
 " this keeps the visual selection active after indenting, which is usually lost
 " after you indent it
