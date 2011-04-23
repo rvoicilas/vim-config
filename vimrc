@@ -5,6 +5,10 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" pathogen doesn't correctly pick up ftdetect directories in plugins
+" for me this used to happen with the vim-clojure plugin
+filetype off
+
 "
 filetype plugin indent on
 
