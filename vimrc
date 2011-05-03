@@ -124,8 +124,6 @@ autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set t
 
 " other python settings
 nmap <F5> oimport pdb; pdb.set_trace()<esc>
-set tags+=~/.vim/tags/python.ctags
-nmap <F6> !nosetests -xs % <esc>
 
 " vim clojure settings
 let vimclojure#HighlightBuiltins=1
@@ -152,6 +150,9 @@ nmap <down> gj
 vmap <up> gk
 vmap <down> gj
 
+" bring up nerdtree on <F4>
+nmap <silent><F4> :NERDTreeToggle <cr>
+
 " for vim version 7 or greater
 if version >= 700
     " set number width
@@ -165,7 +166,6 @@ endif
 if has("gui_running")
 
     " colors
-    
     " solarized with a light background for gvim
     set background=light
     colorscheme solarized
