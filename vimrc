@@ -152,7 +152,6 @@ nmap <down> gj
 vmap <up> gk
 vmap <down> gj
 
-
 " for vim version 7 or greater
 if version >= 700
     " set number width
@@ -163,18 +162,13 @@ if version >= 700
     map <silent><leader>s <esc>:set spell!<cr>
 endif
 
-" Run ctags on <F8>
-map <F8> :!/usr/bin/ctags -R --python-kinds=-iv --exclude=build --exclude=dist -f ~/.vim/tags/python.tags . <CR>
-
 if has("gui_running")
 
     " colors
-    "colorscheme molokai
-    "colorscheme zenburn
-    "colorscheme wombat
-    "colorscheme railscasts
-    "colorscheme blackdust
-    colorscheme rdark
+    
+    " solarized with a light background for gvim
+    set background=light
+    colorscheme solarized
 
     " change cwd to the current file that's being edited (each time)
     set autochdir
@@ -185,6 +179,4 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=R
 
-"else
-"    colorscheme dessert
 endif
