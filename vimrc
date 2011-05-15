@@ -153,6 +153,10 @@ vmap <down> gj
 " bring up nerdtree on <F4>
 nmap <silent><F4> :NERDTreeToggle <cr>
 
+" compile current latex file and open up okular after it has been converted to
+" pdf
+nmap <silent><F10> :!latex % && pdflatex % && okular %:r.pdf <cr>
+
 " for vim version 7 or greater
 if version >= 700
     " set number width
