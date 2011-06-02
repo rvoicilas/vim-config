@@ -167,6 +167,16 @@ if version >= 700
     map <silent><leader>s <esc>:set spell!<cr>
 endif
 
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
 if has("gui_running")
 
     " colors
