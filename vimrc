@@ -185,7 +185,7 @@ if has("gui_running")
     colorscheme solarized
 
     " change cwd to the current file that's being edited (each time)
-    set autochdir
+    "set autochdir
 
     " no need for the menu bar, scrollbar or toolbar in the gui
     set guioptions-=m
