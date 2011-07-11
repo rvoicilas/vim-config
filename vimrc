@@ -191,3 +191,8 @@ if has("gui_running")
     set guioptions-=R
 
 endif
+
+" load specific settings
+if filereadable(expand("$HOME/.vim/specific.vim"))
+	source $HOME/.vim/specific.vim
+endif
