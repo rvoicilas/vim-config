@@ -114,6 +114,9 @@ set title
 "highlight WhitespaceEOL ctermbg=red guibg=red
 "match WhitespaceEOL /\s\+$/
 
+" ignore files in nerdtree by extension
+let NERDTreeIgnore = ['\.pyc$']
+
 " default tab settings
 set tabstop=4
 set shiftwidth=4
@@ -124,6 +127,9 @@ autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set t
 
 " other python settings
 nmap <F5> oimport pdb; pdb.set_trace()<esc>
+
+" ruby tab settings
+autocmd filetype ruby set expandtab | set shiftwidth=2 | set softtabstop=2 | set smartindent | set smarttab | set textwidth=80 | set tabstop=2
 
 " vim clojure settings
 let vimclojure#HighlightBuiltins=1

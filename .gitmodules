@@ -25,3 +25,12 @@
 [submodule "bundle/vim-omlet"]
 	path = bundle/vim-omlet
 	url = https://github.com/vim-scripts/omlet.vim.git
+[submodule "bundle/vim-r"]
+	path = bundle/vim-r
+	url = git://github.com/vim-scripts/Vim-R-plugin.git
+[submodule "bundle/vim-puppet"]
+	path = bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
