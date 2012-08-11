@@ -117,6 +117,13 @@ set title
 " ignore files in nerdtree by extension
 let NERDTreeIgnore = ['\.pyc$']
 
+" Wildmenu completion
+set wildmenu
+set wildmode=list:longest
+set wildignore+=.hg,.git,.svn
+set wildignore+=*.pyc
+set wildignore+=*.orig
+
 " default tab settings
 set tabstop=4
 set shiftwidth=4
@@ -205,6 +212,9 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=r
     set guioptions-=R
+
+    " maximize the window upon startup
+    set lines=999 columns=999
 
 endif
 
