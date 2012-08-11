@@ -142,18 +142,11 @@ let g:pymode_folding = 0 " no default code folding
 let g:pymode_utils_whitespaces = 0 " do not remove unused whitespaces by default
 let g:pymode_syntax_space_errors = 0
 
-" ruby tab settings
-autocmd filetype ruby set expandtab | set shiftwidth=2 | set softtabstop=2 | set smartindent | set smarttab | set textwidth=80 | set tabstop=2
-
-" vim clojure settings
-let vimclojure#HighlightBuiltins=1
-let vimclojure#ParenRainbow=1
-
 " ack.vim settings
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " tagbar map
-nmap <F8> :TagbarToggle<CR>
+nmap <silent><F8> :TagbarToggle<CR>
 
 " easy indentation in visual mode
 " this keeps the visual selection active after indenting, which is usually lost
@@ -175,10 +168,6 @@ vmap <down> gj
 
 " bring up nerdtree on <F4>
 nmap <silent><F4> :NERDTreeToggle <cr>
-
-" compile current latex file and open up okular after it has been converted to
-" pdf
-nmap <silent><F10> :!latex % && pdflatex % && okular %:r.pdf <cr>
 
 " for vim version 7 or greater
 if version >= 700
