@@ -128,6 +128,13 @@ autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set t
 " other python settings
 nmap <F5> oimport pdb; pdb.set_trace()<esc>
 
+" python mode settings
+let g:pymode_lint_checker = "pep8"
+let g:pymode_lint_write = 0 " do not check code every save
+let g:pymode_folding = 0 " no default code folding
+let g:pymode_utils_whitespaces = 0 " do not remove unused whitespaces by default
+let g:pymode_syntax_space_errors = 0
+
 " ruby tab settings
 autocmd filetype ruby set expandtab | set shiftwidth=2 | set softtabstop=2 | set smartindent | set smarttab | set textwidth=80 | set tabstop=2
 
@@ -137,6 +144,9 @@ let vimclojure#ParenRainbow=1
 
 " ack.vim settings
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" tagbar map
+nmap <F8> :TagbarToggle<CR>
 
 " easy indentation in visual mode
 " this keeps the visual selection active after indenting, which is usually lost
