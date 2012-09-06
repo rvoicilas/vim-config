@@ -124,6 +124,9 @@ set wildignore+=.hg,.git,.svn
 set wildignore+=*.pyc
 set wildignore+=*.orig
 
+" command-t
+let g:CommandTMaxHeight = 15
+
 " default tab settings
 set tabstop=4
 set shiftwidth=4
@@ -134,13 +137,18 @@ autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set t
 
 " other python settings
 nmap <F5> oimport pdb; pdb.set_trace()<esc>
+nmap <F6> oimport ipdb; ipdb.set_trace()<esc>
 
 " python mode settings
-let g:pymode_lint_checker = "pep8"
+let g:pymode_lint_checker = "pep8,pyflakes"
 let g:pymode_lint_write = 0 " do not check code every save
+let g:pymode_lint_cwindow = 0 " do not open cwindow if errors are found
 let g:pymode_folding = 0 " no default code folding
 let g:pymode_utils_whitespaces = 0 " do not remove unused whitespaces by default
-let g:pymode_syntax_space_errors = 0
+let g:pymode_syntax_space_errors = 1
+
+" PyLint key mapping
+nmap <silent><F7> :PyLint<CR>
 
 " ack.vim settings
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -201,6 +209,9 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=r
     set guioptions-=R
+
+    " powerline
+    let g:Powerline_symbols = 'fancy'
 
     " maximize the window upon startup
     set lines=999 columns=999
