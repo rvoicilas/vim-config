@@ -149,12 +149,13 @@ let g:pymode_syntax_space_errors = 1
 
 " PyLint key mapping
 nmap <silent><F7> :PyLint<CR>
+nmap <silent><F8> :sign unplace *<CR>
 
 " ack.vim settings
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " tagbar map
-nmap <silent><F8> :TagbarToggle<CR>
+nmap <silent><F9> :TagbarToggle<CR>
 
 " easy indentation in visual mode
 " this keeps the visual selection active after indenting, which is usually lost
