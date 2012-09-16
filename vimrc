@@ -198,12 +198,14 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+colorscheme badwolf
+
 if has("gui_running")
 
     " colors
     " solarized with a light background for gvim
-    set background=light
-    colorscheme solarized
+    " set background=light
+    " colorscheme solarized
 
     " no need for the menu bar, scrollbar or toolbar in the gui
     set guioptions-=m
