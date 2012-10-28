@@ -110,12 +110,14 @@ set hlsearch
 " show the current filename and path in the term title
 set title
 
-" highlight end of the line whitespace
-"highlight WhitespaceEOL ctermbg=red guibg=red
-"match WhitespaceEOL /\s\+$/
+" string to put at the start of lines that have been wrapped
+set showbreak=↪
 
 " ignore files in nerdtree by extension
 let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeHighlightCursorLine = 1
+let NERDChristmasTree = 1
+let NERDTreeChDirMode = 2
 
 " Wildmenu completion
 set wildmenu
@@ -146,6 +148,10 @@ let g:pymode_lint_cwindow = 0 " do not open cwindow if errors are found
 let g:pymode_folding = 0 " no default code folding
 let g:pymode_utils_whitespaces = 0 " do not remove unused whitespaces by default
 let g:pymode_syntax_space_errors = 1
+let g:pymode_run = 0 " the run script is disabled
+let g:pymode_virtualenv = 0 " virtualenv support disabled
+let g:pymode_options_indent = 0 " no default options for python buffers
+let g:pymode_options_other = 0 " same as above
 
 " PyLint key mapping
 nmap <silent><F7> :PyLint<CR>
@@ -198,6 +204,8 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+set background=dark
+let g:badwolf_html_link_underline = 0
 colorscheme badwolf
 
 if has("gui_running")
