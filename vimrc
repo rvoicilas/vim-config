@@ -147,7 +147,7 @@ let g:pymode_lint_write = 0 " do not check code every save
 let g:pymode_lint_cwindow = 0 " do not open cwindow if errors are found
 let g:pymode_folding = 0 " no default code folding
 let g:pymode_utils_whitespaces = 0 " do not remove unused whitespaces by default
-let g:pymode_syntax_space_errors = 1
+let g:pymode_syntax_space_errors = 0
 let g:pymode_run = 0 " the run script is disabled
 let g:pymode_virtualenv = 0 " virtualenv support disabled
 let g:pymode_options_indent = 0 " no default options for python buffers
@@ -204,25 +204,21 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" colorscheme
 set background=dark
 let g:badwolf_html_link_underline = 0
 colorscheme badwolf
 
-if has("gui_running")
+" powerline
+let g:Powerline_symbols = 'fancy'
 
-    " colors
-    " solarized with a light background for gvim
-    " set background=light
-    " colorscheme solarized
+if has("gui_running")
 
     " no need for the menu bar, scrollbar or toolbar in the gui
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
     set guioptions-=R
-
-    " powerline
-    let g:Powerline_symbols = 'fancy'
 
     " maximize the window upon startup
     set lines=999 columns=999
