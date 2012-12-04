@@ -2,12 +2,7 @@
 set nocompatible
 
 " pathogen settings
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
-" pathogen doesn't correctly pick up ftdetect directories in plugins
-" for me this used to happen with the vim-clojure plugin
-filetype off
+call pathogen#infect()
 
 "
 filetype plugin indent on
@@ -162,6 +157,11 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " tagbar map
 nmap <silent><F9> :TagbarToggle<CR>
+
+" git-vim like bindings for fugitive
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gb :Gblame<cr>
 
 " easy indentation in visual mode
 " this keeps the visual selection active after indenting, which is usually lost
