@@ -168,6 +168,7 @@ let g:Gitv_CommitStep = 50 " commits should do it
 let g:Gitv_OpenHorizontal = 0
 let g:Gitv_WipeAllOnClose = 1
 let g:Gitv_OpenPreviewOnLaunch = 0
+nmap <leader>gv :Gitv<cr>
 
 " easy indentation in visual mode
 " this keeps the visual selection active after indenting, which is usually lost
