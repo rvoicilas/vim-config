@@ -10,6 +10,10 @@ filetype plugin indent on
 " number of commands and search patterns to save
 set history=5000
 
+" make tabs, trailing whitespace, and EOL characters easy to spot.
+set list
+set listchars=tab:▸\ ,trail:·,eol:¬
+
 " enable numbers
 set nu
 
