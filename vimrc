@@ -196,6 +196,8 @@ vmap <down> gj
 " bring up nerdtree on <F4>
 nmap <silent><F4> :NERDTreeToggle <cr>
 
+nnoremap ,, <c-^>
+
 " for vim version 7 or greater
 if version >= 700
     " set number width
