@@ -103,8 +103,13 @@ set statusline+=\ %{fugitive#statusline()}
 set ruler
 set rulerformat=%h%r%m%=%f
 
-" highlight the current search pattern
-set hlsearch
+" do not highlight the current search pattern
+set nohlsearch
+
+set lazyredraw
+
+" visual vertical line
+set colorcolumn=80
 
 " show the current filename and path in the term title
 set title
@@ -122,7 +127,7 @@ let NERDTreeChDirMode = 2
 set wildmenu
 set wildmode=list:longest
 set wildignore+=.hg,.git,.svn
-set wildignore+=*.pyc
+set wildignore+=*.pyc,*.class
 set wildignore+=*.orig
 
 " command-t
@@ -133,12 +138,14 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+autocmd filetype ruby set ai sw=2 sts=2 et
+
 " python tab settings
 autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=80 | set softtabstop=4 | set smartindent | set smarttab
 
 " other python settings
 nmap <F5> oimport pdb; pdb.set_trace()<esc>
-nmap <F6> oimport ipdb; ipdb.set_trace()<esc>
+nmap <F6> oimport IPython; IPython.embed()<esc>
 
 " python mode settings
 let g:pymode_lint_checker = "pep8,pyflakes"
