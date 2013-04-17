@@ -15,7 +15,7 @@ set list
 set listchars=tab:▸\ ,trail:·,eol:¬
 
 " enable numbers
-set nu
+set number
 
 " show control characters
 set binary
@@ -87,8 +87,7 @@ set wrap
 " smooth scroll
 set sidescroll=1
 
-" swap file locations
-set dir=/tmp " maybe even ~/tmp ?
+set noswapfile
 
 " allow visual block select everywhere
 set virtualedit=block
@@ -144,8 +143,8 @@ autocmd filetype ruby set ai sw=2 sts=2 et
 autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=80 | set softtabstop=4 | set smartindent | set smarttab
 
 " other python settings
-nmap <F5> oimport pdb; pdb.set_trace()<esc>
-nmap <F6> oimport IPython; IPython.embed()<esc>
+nmap <F5> oimport IPython; IPython.embed()<esc>
+nmap <F6> oimport ipdb; ipdb.set_trace()<esc>
 
 " python mode settings
 let g:pymode_lint_checker = "pep8,pyflakes"
