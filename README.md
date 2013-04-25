@@ -11,3 +11,7 @@ Switch to the ~/.vim directory and fetch the git submodules:
 Symlink .vimrc:
 
     ln -s ~/.vim/vimrc ~/.vimrc
+
+If you have any settings you'd like to override, do so in specific.vim:
+
+    vim ~/.vim/specific.vim
