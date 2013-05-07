@@ -107,8 +107,10 @@ set nohlsearch
 
 set lazyredraw
 
-" visual vertical line
-set colorcolumn=80
+if version >= 730
+    " visual vertical line
+    set colorcolumn=80
+endif
 
 " show the current filename and path in the term title
 set title
