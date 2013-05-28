@@ -160,6 +160,7 @@ let g:pymode_run = 0 " the run script is disabled
 let g:pymode_virtualenv = 0 " virtualenv support disabled
 let g:pymode_options_indent = 0 " no default options for python buffers
 let g:pymode_options_other = 0 " same as above
+let g:pymode_breakpoint = 0 " do not load breakpoint plugin so that the breakpoint key (<leader>b) doesn't override Command-T's buffer key
 
 " PyLint key mapping
 nmap <silent><F7> :PyLint<CR>
