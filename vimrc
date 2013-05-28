@@ -139,7 +139,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-autocmd filetype ruby set ai sw=2 sts=2 et
+autocmd filetype ruby set autoindent tabstop=2 shiftwidth=2 softtabstop=2
 
 " python tab settings
 autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=80 | set softtabstop=4 | set smartindent | set smarttab
