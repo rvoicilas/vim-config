@@ -107,7 +107,7 @@ set nohlsearch
 
 set lazyredraw
 
-if version >= 730
+if version >= 703
     " visual vertical line
     set colorcolumn=80
 endif
