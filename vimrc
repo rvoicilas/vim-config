@@ -152,6 +152,7 @@ nmap <F6> oimport ipdb; ipdb.set_trace()<esc>
 let g:pymode_lint_checker = "pep8,pyflakes"
 let g:pymode_lint_write = 0 " do not check code every save
 let g:pymode_lint_cwindow = 0 " do not open cwindow if errors are found
+let g:pymode_lint_ignore = "E126,E128" " continuation line over/under-indented
 let g:pymode_folding = 0 " no default code folding
 let g:pymode_utils_whitespaces = 0 " do not remove unused whitespaces by default
 let g:pymode_syntax_space_errors = 0
