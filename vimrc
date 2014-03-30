@@ -142,7 +142,7 @@ set expandtab
 autocmd filetype ruby set autoindent tabstop=2 shiftwidth=2 softtabstop=2
 
 " python tab settings
-autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=80 | set softtabstop=4 | set smartindent | set smarttab
+autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=80 | set softtabstop=4 | set smarttab
 
 " other python settings
 nmap <F5> oimport IPython; IPython.embed()<esc>
@@ -150,9 +150,14 @@ nmap <F6> oimport ipdb; ipdb.set_trace()<esc>
 
 " python mode settings
 let g:pymode_lint_checker = "pep8,pyflakes"
-let g:pymode_lint_write = 0 " do not check code every save
+let g:pymode_lint_on_write = 0 " do not check code every save
+let g:pymode_lint_unmodified = 0
+let g:pymode_lint_on_fly = 0
 let g:pymode_lint_cwindow = 0 " do not open cwindow if errors are found
-let g:pymode_lint_ignore = "E126,E128" " continuation line over/under-indented
+let g:pymode_lint_ignore = "E126,E127,E128" " continuation line over/under-indented
+let g:pymode_rope_lookup_project = 0 " do not search for .ropeproject
+let g:pymode_rope_regenerate_on_write = 0 " rope does not regenerate project cache on every save
+let g:pymode_rope_completion = 0
 let g:pymode_folding = 0 " no default code folding
 let g:pymode_utils_whitespaces = 0 " do not remove unused whitespaces by default
 let g:pymode_syntax_space_errors = 0
@@ -162,13 +167,14 @@ let g:pymode_virtualenv = 0 " virtualenv support disabled
 let g:pymode_options_indent = 0 " no default options for python buffers
 let g:pymode_options_other = 0 " same as above
 let g:pymode_breakpoint = 0 " do not load breakpoint plugin so that the breakpoint key (<leader>b) doesn't override Command-T's buffer key
+let g:pymode_trim_whitespaces = 0
 
 " PyLint key mapping
-nmap <silent><F7> :PyLint<CR>
+nmap <silent><F7> :PymodeLint<CR>
 nmap <silent><F8> :sign unplace *<CR>
 
 " ack.vim settings
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ag --nocolor --nogroup --column"
 
 " tagbar map
 nmap <silent><F9> :TagbarToggle<CR>
@@ -214,8 +220,8 @@ if version >= 700
     set numberwidth=4
 
     " spell check on <F2>
-    map <silent><F2> <esc>:set spell!<cr>
-    map <silent><leader>s <esc>:set spell!<cr>
+    " map <silent><F2> <esc>:set spell!<cr>
+    " map <silent><leader>s <esc>:set spell!<cr>
 endif
 
 " disable arrow keys
@@ -251,5 +257,5 @@ endif
 
 " load specific settings
 if filereadable(expand("$HOME/.vim/specific.vim"))
-	source $HOME/.vim/specific.vim
+    source $HOME/.vim/specific.vim
 endif
