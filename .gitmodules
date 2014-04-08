@@ -25,3 +25,6 @@
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = https://github.com/rvoicilas/gitv.git
+[submodule "bundle/gitgutter"]
+	path = bundle/gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
