@@ -31,3 +31,6 @@
 [submodule "bundle/django.vim"]
 	path = bundle/django.vim
 	url = git@github.com:vim-scripts/django.vim.git
+[submodule "bundle/vim-jinja"]
+	path = bundle/vim-jinja
+	url = https://github.com/mitsuhiko/vim-jinja.git
