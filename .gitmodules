@@ -28,6 +28,12 @@
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/django.vim"]
+	path = bundle/django.vim
+	url = git@github.com:vim-scripts/django.vim.git
+[submodule "bundle/vim-jinja"]
+	path = bundle/vim-jinja
+	url = https://github.com/mitsuhiko/vim-jinja.git
 [submodule "bundle/jshint2.vim"]
 	path = bundle/jshint2.vim
 	url = git@github.com:Shutnik/jshint2.vim.git
