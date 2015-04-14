@@ -237,10 +237,14 @@ imap <right> <nop>
 " colorscheme
 set background=dark
 let g:badwolf_html_link_underline = 0
+let g:badwolf_darkgutter = 1
+let g:badwolf_tabline = 3
 colorscheme badwolf
 
-" powerline
-let g:Powerline_symbols = 'fancy'
+" airline
+set timeoutlen=50
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'badwolf'
 
 if has("gui_running")
 

@@ -37,3 +37,12 @@
 [submodule "bundle/jshint2.vim"]
 	path = bundle/jshint2.vim
 	url = git@github.com:Shutnik/jshint2.vim.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = git@github.com:bling/vim-airline.git
+[submodule "bundle/vim-webdevicons"]
+	path = bundle/vim-webdevicons
+	url = https://github.com/ryanoasis/vim-webdevicons
