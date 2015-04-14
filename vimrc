@@ -242,9 +242,10 @@ let g:badwolf_tabline = 3
 colorscheme badwolf
 
 " airline
-set timeoutlen=50
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 if has("gui_running")
 
