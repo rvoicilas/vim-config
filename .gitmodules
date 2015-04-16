@@ -46,3 +46,6 @@
 [submodule "bundle/vim-webdevicons"]
 	path = bundle/vim-webdevicons
 	url = https://github.com/ryanoasis/vim-webdevicons
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = git@github.com:jlanzarotta/bufexplorer.git
