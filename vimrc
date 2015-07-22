@@ -107,10 +107,10 @@ set nohlsearch
 
 set lazyredraw
 
-if version >= 703
-    " visual vertical line
-    set colorcolumn=80
-endif
+" if version >= 703
+"     " visual vertical line
+"     set colorcolumn=80
+" endif
 
 " show the current filename and path in the term title
 set title
@@ -236,10 +236,10 @@ imap <right> <nop>
 
 " colorscheme
 set background=dark
-let g:badwolf_html_link_underline = 0
-let g:badwolf_darkgutter = 1
-let g:badwolf_tabline = 3
-colorscheme badwolf
+" let g:badwolf_html_link_underline = 0
+" let g:badwolf_darkgutter = 1
+" let g:badwolf_tabline = 3
+colorscheme atom-dark-256
 
 " airline
 let g:airline_powerline_fonts = 1
