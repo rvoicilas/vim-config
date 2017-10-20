@@ -107,11 +107,6 @@ set nohlsearch
 
 set lazyredraw
 
-" if version >= 703
-"     " visual vertical line
-"     set colorcolumn=80
-" endif
-
 " show the current filename and path in the term title
 set title
 
@@ -131,9 +126,6 @@ set wildignore+=.hg,.git,.svn
 set wildignore+=*.pyc,*.class
 set wildignore+=*.orig
 
-" command-t
-let g:CommandTMaxHeight = 15
-
 " default tab settings
 set tabstop=4
 set shiftwidth=4
@@ -142,7 +134,7 @@ set expandtab
 autocmd filetype ruby set autoindent tabstop=2 shiftwidth=2 softtabstop=2
 
 " python tab settings
-autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=80 | set softtabstop=4 | set smarttab
+autocmd filetype python set tabstop=4 | set shiftwidth=4 | set expandtab | set textwidth=79 | set softtabstop=4 | set smarttab
 
 " other python settings
 nmap <F5> oimport IPython; IPython.embed()<esc>
@@ -168,6 +160,7 @@ let g:pymode_options_indent = 0 " no default options for python buffers
 let g:pymode_options_other = 0 " same as above
 let g:pymode_breakpoint = 0 " do not load breakpoint plugin so that the breakpoint key (<leader>b) doesn't override Command-T's buffer key
 let g:pymode_trim_whitespaces = 0
+let g:pymode_options_colorcolumn = 0
 
 " PyLint key mapping
 nmap <silent><F7> :PymodeLint<CR>
@@ -189,7 +182,7 @@ let g:Gitv_CommitStep = 50 " commits should do it
 let g:Gitv_OpenHorizontal = 0
 let g:Gitv_WipeAllOnClose = 1
 let g:Gitv_OpenPreviewOnLaunch = 0
-nmap <leader>gv :Gitv<cr>
+nmap <leader>gv :Gitv --all<cr>
 
 " easy indentation in visual mode
 " this keeps the visual selection active after indenting, which is usually lost
@@ -218,10 +211,6 @@ nnoremap ,, <c-^>
 if version >= 700
     " set number width
     set numberwidth=4
-
-    " spell check on <F2>
-    " map <silent><F2> <esc>:set spell!<cr>
-    " map <silent><leader>s <esc>:set spell!<cr>
 endif
 
 " disable arrow keys
@@ -247,18 +236,19 @@ let g:airline_theme = 'badwolf'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-if has("gui_running")
+" fzf
+set rtp+=~/.fzf
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let g:fzf_layout = {'down': '~20%'}
+nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>a :Ag<CR>
 
-    " no need for the menu bar, scrollbar or toolbar in the gui
-    set guioptions-=m
-    set guioptions-=T
-    set guioptions-=r
-    set guioptions-=R
-
-    " maximize the window upon startup
-    set lines=999 columns=999
-
-endif
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
 
 " load specific settings
 if filereadable(expand("$HOME/.vim/specific.vim"))

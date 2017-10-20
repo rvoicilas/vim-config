@@ -16,15 +16,9 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git://github.com/klen/python-mode.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "bundle/badwolf"]
 	path = bundle/badwolf
 	url = https://github.com/sjl/badwolf.git
-[submodule "bundle/gitv"]
-	path = bundle/gitv
-	url = https://github.com/rvoicilas/gitv.git
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
@@ -52,3 +46,18 @@
 [submodule "bundle/vim-atom-dark"]
 	path = bundle/vim-atom-dark
 	url = https://github.com/gosukiwi/vim-atom-dark.git
+[submodule "bundle/jedi"]
+	path = bundle/jedi
+	url = http://github.com/davidhalter/jedi-vim
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = https://github.com/fatih/vim-go
+[submodule "bundle/gitv"]
+	path = bundle/gitv
+	url = https://github.com/gregsexton/gitv.git
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "bundle/goyo"]
+	path = bundle/goyo
+	url = https://github.com/junegunn/goyo.vim.git
