@@ -141,12 +141,13 @@ nmap <F5> oimport IPython; IPython.embed()<esc>
 nmap <F6> oimport ipdb; ipdb.set_trace()<esc>
 
 " python mode settings
-let g:pymode_lint_checker = "pep8,pyflakes"
+let g:pymode_lint = 1
+let g:pymode_lint_checkers = ['pep8', 'pyflakes']
 let g:pymode_lint_on_write = 0 " do not check code every save
 let g:pymode_lint_unmodified = 0
 let g:pymode_lint_on_fly = 0
 let g:pymode_lint_cwindow = 0 " do not open cwindow if errors are found
-let g:pymode_lint_ignore = "E126,E127,E128" " continuation line over/under-indented
+"let g:pymode_lint_ignore = "E126,E127,E128" " continuation line over/under-indented
 let g:pymode_rope_lookup_project = 0 " do not search for .ropeproject
 let g:pymode_rope_regenerate_on_write = 0 " rope does not regenerate project cache on every save
 let g:pymode_rope_completion = 0
@@ -249,6 +250,12 @@ let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
+
+" ale
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'python': [],
+\}
 
 " load specific settings
 if filereadable(expand("$HOME/.vim/specific.vim"))
