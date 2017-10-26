@@ -7,6 +7,8 @@ call pathogen#infect()
 "
 filetype plugin indent on
 
+set encoding=utf8
+
 " number of commands and search patterns to save
 set history=5000
 
@@ -25,10 +27,6 @@ set noautoindent
 
 " align to standard indent when shifting with < and >
 set shiftround
-
-" change with F11
-set background=dark
-map <silent><F11> :let &background=(&background == "dark" ? "light" : "dark")<cr>
 
 " use syntax color higlighting
 syntax on
@@ -226,9 +224,6 @@ imap <right> <nop>
 
 " colorscheme
 set background=dark
-" let g:badwolf_html_link_underline = 0
-" let g:badwolf_darkgutter = 1
-" let g:badwolf_tabline = 3
 colorscheme atom-dark-256
 
 " airline
