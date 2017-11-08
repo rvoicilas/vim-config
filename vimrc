@@ -175,6 +175,7 @@ nmap <silent><F9> :TagbarToggle<CR>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gb :Gblame<cr>
+nmap <leader>gh :Gbrowse<cr>
 
 " gitv settings
 let g:Gitv_CommitStep = 50 " commits should do it
@@ -237,8 +238,9 @@ set rtp+=~/.fzf
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_layout = {'down': '~20%'}
 nmap ; :Buffers<CR>
-nmap <Leader>t :Files<CR>
-nmap <Leader>a :Ag<CR>
+nmap <leader>t :Files<CR>
+nmap <leader>a :Ag<CR>
+nmap <leader>l :Lines<CR>
 
 " GitGutter styling to use · instead of +/-
 let g:gitgutter_sign_added = '∙'
@@ -256,3 +258,19 @@ let g:ale_linters = {
 if filereadable(expand("$HOME/.vim/specific.vim"))
     source $HOME/.vim/specific.vim
 endif
+
+" Use firefox as the default browser for :Gbrowse like tools.
+let g:netrw_browsex_viewer='firefox'
+
+" Alternates between firefox and google-chrome as the browser for :Gbrowse
+" like tools.
+function Change_browser()
+    if g:netrw_browsex_viewer ==? 'firefox'
+        let g:netrw_browsex_viewer = 'google-chrome'
+    else
+        let g:netrw_browsex_viewer = 'firefox'
+    endif
+endfunction
+
+nmap <leader>\ :echo g:netrw_browsex_viewer<CR>
+nmap <leader>\c :call Change_browser()<CR>
